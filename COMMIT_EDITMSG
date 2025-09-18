@@ -1,0 +1,8 @@
+Improve news fetching logic by prioritizing city-specific results
+
+Implement error handling and fallback mechanisms in NewsService to ensure news data is retrieved even if specific city searches fail, also includes mapping country names to ISO codes.
+
+Replit-Commit-Author: Agent
+Replit-Commit-Session-Id: 2b3c27d9-f6a9-4835-820e-2a94e28e3fc2
+Replit-Commit-Checkpoint-Type: full_checkpoint
+Replit-Commit-Screenshot-Url: https://storage.googleapis.com/screenshot-production-us-central1/4fc2ed42-8a47-49d8-ae5a-637178da9e39/2b3c27d9-f6a9-4835-820e-2a94e28e3fc2/IZst9rO

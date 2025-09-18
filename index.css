@@ -1,0 +1,524 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ocean Blue Theme - Deep and Soothing */
+:root {
+  --background: linear-gradient(135deg, #0c1426 0%, #1a2447 50%, #2d3e68 100%);
+  --foreground: hsl(210, 20%, 92%);
+  --card: rgba(20, 40, 85, 0.85);
+  --card-foreground: hsl(210, 20%, 95%);
+  --popover: rgba(20, 40, 85, 0.90);
+  --popover-foreground: hsl(210, 20%, 95%);
+  --primary: hsl(200, 85%, 55%);
+  --primary-foreground: hsl(210, 100%, 98%);
+  --secondary: rgba(65, 105, 180, 0.7);
+  --secondary-foreground: hsl(210, 20%, 98%);
+  --muted: rgba(65, 105, 180, 0.5);
+  --muted-foreground: hsl(210, 20%, 80%);
+  --accent: hsl(190, 85%, 65%);
+  --accent-foreground: hsl(210, 15%, 98%);
+  --destructive: hsl(0, 85%, 65%);
+  --destructive-foreground: hsl(210, 100%, 98%);
+  --border: rgba(65, 105, 180, 0.6);
+  --input: rgba(65, 105, 180, 0.5);
+  --ring: hsl(200, 85%, 55%);
+  --chart-1: hsl(200, 85%, 55%);
+  --chart-2: hsl(190, 85%, 65%);
+  --chart-3: hsl(180, 75%, 60%);
+  --chart-4: hsl(170, 70%, 65%);
+  --chart-5: hsl(160, 65%, 70%);
+  --sidebar: hsl(220, 55%, 18%);
+  --sidebar-foreground: hsl(210, 100%, 98%);
+  --sidebar-primary: hsl(200, 85%, 55%);
+  --sidebar-primary-foreground: hsl(210, 100%, 98%);
+  --sidebar-accent: hsl(220, 65%, 28%);
+  --sidebar-accent-foreground: hsl(200, 85%, 55%);
+  --sidebar-border: hsl(220, 55%, 35%);
+  --sidebar-ring: hsl(200, 85%, 55%);
+  --font-sans: "Inter", sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1rem;
+  --shadow-2xs: 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  --shadow-xs: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.08);
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.12), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.28);
+  --shadow-xl: 0 35px 60px -12px rgba(0, 0, 0, 0.38);
+  --shadow-2xl: 0 50px 100px -20px rgba(0, 0, 0, 0.55);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+/* Sunset Teal Theme - Warm and Elegant */
+.theme-teal {
+  --background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  --foreground: hsl(180, 15%, 92%);
+  --card: rgba(32, 58, 67, 0.85);
+  --card-foreground: hsl(180, 15%, 95%);
+  --popover: rgba(32, 58, 67, 0.90);
+  --popover-foreground: hsl(180, 15%, 95%);
+  --primary: hsl(175, 75%, 55%);
+  --primary-foreground: hsl(180, 100%, 98%);
+  --secondary: rgba(72, 126, 142, 0.7);
+  --secondary-foreground: hsl(180, 15%, 98%);
+  --muted: rgba(72, 126, 142, 0.5);
+  --muted-foreground: hsl(180, 15%, 80%);
+  --accent: hsl(165, 75%, 65%);
+  --accent-foreground: hsl(180, 15%, 98%);
+  --destructive: hsl(0, 75%, 65%);
+  --destructive-foreground: hsl(180, 100%, 98%);
+  --border: rgba(72, 126, 142, 0.6);
+  --input: rgba(72, 126, 142, 0.5);
+  --ring: hsl(175, 75%, 55%);
+  --chart-1: hsl(175, 75%, 55%);
+  --chart-2: hsl(165, 75%, 65%);
+  --chart-3: hsl(155, 70%, 60%);
+  --chart-4: hsl(145, 65%, 65%);
+  --chart-5: hsl(135, 60%, 70%);
+  --sidebar: hsl(190, 45%, 18%);
+  --sidebar-foreground: hsl(180, 100%, 98%);
+  --sidebar-primary: hsl(175, 75%, 55%);
+  --sidebar-primary-foreground: hsl(180, 100%, 98%);
+  --sidebar-accent: hsl(190, 55%, 28%);
+  --sidebar-accent-foreground: hsl(175, 75%, 55%);
+  --sidebar-border: hsl(190, 45%, 35%);
+  --sidebar-ring: hsl(175, 75%, 55%);
+  --font-sans: "Inter", sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 1rem;
+  --shadow-2xs: 0 1px 2px 0 rgba(0, 30, 30, 0.08);
+  --shadow-xs: 0 1px 3px 0 rgba(0, 30, 30, 0.12), 0 1px 2px 0 rgba(0, 30, 30, 0.08);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 30, 30, 0.12), 0 2px 4px -1px rgba(0, 30, 30, 0.08);
+  --shadow: 0 10px 15px -3px rgba(0, 30, 30, 0.12), 0 4px 6px -2px rgba(0, 30, 30, 0.08);
+  --shadow-md: 0 20px 25px -5px rgba(0, 30, 30, 0.12), 0 10px 10px -5px rgba(0, 30, 30, 0.06);
+  --shadow-lg: 0 25px 50px -12px rgba(0, 30, 30, 0.28);
+  --shadow-xl: 0 35px 60px -12px rgba(0, 30, 30, 0.38);
+  --shadow-2xl: 0 50px 100px -20px rgba(0, 30, 30, 0.55);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+body {
+  background: var(--background);
+  min-height: 100vh;
+  transition: background 0.5s ease;
+}
+
+html {
+  background: var(--background);
+  transition: background 0.5s ease;
+}
+
+/* Apply teal theme background when class is active */
+.theme-teal body,
+.theme-teal html {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  background: transparent;
+  min-height: 100vh;
+}
+
+.weather-gradient {
+  background: var(--background);
+  transition: background 0.5s ease;
+}
+
+.theme-teal .weather-gradient {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(16px);
+  background: rgba(37, 99, 235, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 25px 45px rgba(37, 99, 235, 0.2);
+}
+
+.card-enhanced {
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(20, 40, 85, 0.8) 0%, rgba(65, 105, 180, 0.7) 50%, rgba(100, 149, 237, 0.8) 100%);
+  border: 1px solid rgba(65, 105, 180, 0.4);
+  box-shadow: 0 20px 40px rgba(20, 40, 85, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.theme-teal .card-enhanced {
+  background: linear-gradient(135deg, rgba(32, 58, 67, 0.8) 0%, rgba(72, 126, 142, 0.7) 50%, rgba(95, 158, 160, 0.8) 100%);
+  border: 1px solid rgba(72, 126, 142, 0.4);
+  box-shadow: 0 20px 40px rgba(32, 58, 67, 0.3);
+}
+
+.card-enhanced:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+}
+
+/* Line clamp utilities for news cards */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #0277bd 0%, #01579b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.scale-in {
+  animation: scaleIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.weather-icon-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Weather-specific animations */
+.sunny-bg {
+  background: linear-gradient(45deg, #fef3c7, #fcd34d, #f59e0b);
+  background-size: 300% 300%;
+  animation: sunnyGlow 4s ease-in-out infinite;
+}
+
+@keyframes sunnyGlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.rainy-bg {
+  background: linear-gradient(180deg, #1e40af, #3b82f6, #7dd3fc);
+  position: relative;
+  overflow: hidden;
+}
+
+.rainy-bg::before {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 98px,
+    rgba(255, 255, 255, 0.03) 100px
+  );
+  animation: rain 1s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
+}
+
+.snowy-bg {
+  background: linear-gradient(135deg, #f0f9ff, #e0f2fe, #bae6fd);
+  position: relative;
+  overflow: hidden;
+}
+
+.snowy-bg::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, rgba(135, 206, 235, 0.4), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(173, 216, 230, 0.3), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(135, 206, 235, 0.4), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(173, 216, 230, 0.3), transparent);
+  animation: snow 10s linear infinite;
+  z-index: 1;
+}
+
+@keyframes snow {
+  0% { transform: translateY(-100vh); }
+  100% { transform: translateY(100vh); }
+}
+
+.cloudy-bg {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1, #94a3b8);
+  animation: cloudMove 8s ease-in-out infinite;
+}
+
+@keyframes cloudMove {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(0.95); }
+}
+
+/* Interactive weather icons */
+.weather-icon-interactive {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.weather-icon-interactive:hover {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+}
+
+.weather-icon-sun {
+  animation: sunRotate 20s linear infinite, sunPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes sunRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sunPulse {
+  from { filter: brightness(1) drop-shadow(0 0 10px #ffeb3b); }
+  to { filter: brightness(1.2) drop-shadow(0 0 20px #ff9800); }
+}
+
+.weather-icon-rain {
+  animation: rainBounce 1.5s ease-in-out infinite;
+}
+
+@keyframes rainBounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.weather-icon-cloud {
+  animation: cloudFloat 6s ease-in-out infinite;
+}
+
+@keyframes cloudFloat {
+  0%, 100% { transform: translateX(0px) translateY(0px); }
+  25% { transform: translateX(5px) translateY(-2px); }
+  75% { transform: translateX(-5px) translateY(2px); }
+}
+
+.weather-icon-snow {
+  animation: snowfall 3s ease-in-out infinite;
+}
+
+@keyframes snowfall {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(180deg); }
+}
+
+.weather-icon-thunder {
+  animation: thunder 2s ease-in-out infinite;
+}
+
+@keyframes thunder {
+  0%, 90%, 100% { filter: brightness(1); }
+  5%, 15% { filter: brightness(2) drop-shadow(0 0 15px #ffeb3b); }
+}
+
+/* Temperature display animations */
+.temperature-display {
+  animation: temperatureGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes temperatureGlow {
+  from { text-shadow: 0 0 10px rgba(59, 130, 246, 0.5); }
+  to { text-shadow: 0 0 20px rgba(59, 130, 246, 0.8), 0 0 30px rgba(59, 130, 246, 0.3); }
+}
+
+/* Interactive card effects */
+.weather-card-interactive {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.weather-card-interactive::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.weather-card-interactive:hover::before {
+  opacity: 1;
+  animation: cardShine 0.6s ease-out;
+}
+
+@keyframes cardShine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.weather-card-interactive:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Particle effects */
+.weather-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: particleFloat 6s infinite linear;
+}
+
+@keyframes particleFloat {
+  0% {
+    transform: translateY(100vh) translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(100px);
+    opacity: 0;
+  }
+}
+
+/* Loading animations */
+.weather-loading {
+  animation: weatherPulse 2s ease-in-out infinite;
+}
+
+@keyframes weatherPulse {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+
+/* Custom Scrollbar for Hourly Forecast */
+.hourly-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.hourly-scrollbar::-webkit-scrollbar-track {
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: 4px;
+}
+
+.hourly-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #0ea5e9, #3b82f6);
+  border-radius: 4px;
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.hourly-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #0284c7, #2563eb);
+}
